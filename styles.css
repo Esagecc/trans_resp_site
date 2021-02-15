@@ -4,6 +4,10 @@ body {
     font-family: sans-serif;
 }
 
+.mylogo {
+    height: 80px;
+}
+
 section {
     position: relative;
     width: 100%;
@@ -76,7 +80,7 @@ ul li a:hover {
 
     header ul {
         width: 100%;
-        top: -22px;
+        top: -4px;
         display: none;
     }
 
