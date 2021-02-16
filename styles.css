@@ -6,6 +6,7 @@ body {
 
 .mylogo {
     height: 80px;
+
 }
 
 section {
@@ -53,20 +54,77 @@ ul li a {
 }
 
 ul li a:hover {
-    background: #000;
-    color: #fff;
+        color: rgb(13, 13, 26);
 }
 
+ul li a:before, ul li a:after{
+    content: '';
+    background: #1c0cf7;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+  
+  ul li a:before{
+    top: 0;
+    left: 0;
+  }
+  
+ ul li a:after{
+    top: 100%;
+    right: 0;
+  }
+  
+  ul li a:hover:before, ul li a:hover:after{
+    width: 100%;
+  }
 .toggle {
     display:none;
     position: absolute;
     right: 10px;
     top: 26px;
-    background: #f00;
+    background: #1c0cf7;
     color: #fff;
-    padding: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 1em;
+    margin: 25vh auto 0;
+    background-color: rgba(245, 241, 241, 0.7);
+    }
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+button{
+    align-self: flex-start;
+    font-size: 1.25em;
+    color: white;
+    background-color: #1c0cf7;
+    padding: .5em 2em;
+    border-radius: .5em;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgba(34, 10, 173, 1);
 }
 
 @media (max-width:992px){
@@ -84,16 +142,26 @@ ul li a:hover {
         display: none;
     }
 
-header ul.active{
+    header ul.active{
     display: block;
-}
+    }
 
     header ul li a {
         margin: 0;
+        position: relative;
         display: block;
         text-align: center;
         color: #ffff;
         background: rgba(0, 0, 0, .5);
+        transition: ease .3s;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
     }
 }
 
